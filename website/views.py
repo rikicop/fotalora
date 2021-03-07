@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Contact
+from django.http import JsonResponse
 
 def home(request):
     if request.method =="POST":
@@ -8,8 +9,9 @@ def home(request):
         message_form = request.POST['messagef']
         #Insertar el objeto
         Contact.objects.create(name=name_form,email=email_form,message=message_form)
-
-        return render(request, 'home.html', {})
+         
+        return JsonResponse({"name_form":name_form}, status=200) 
+        return render(request, 'home.html', {"name_form":name_form})
           
     else:
         
