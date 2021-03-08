@@ -34,7 +34,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'fotalra_project.urls'
+ROOT_URLCONF = 'fotalora_project.urls'
 
 TEMPLATES = [
     {
@@ -52,7 +52,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'fotalra_project.wsgi.application'
+WSGI_APPLICATION = 'fotalora_project.wsgi.application'
 
 
 # Database
