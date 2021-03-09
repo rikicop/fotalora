@@ -213,11 +213,14 @@ img{
   color: var(--first-color);
 }
 .home__img{
+  
+  margin-right: 10px;
   position: absolute;
   right: 0;
   bottom: 0;
   width: 295px;
 }
+
 
 /*BUTTONS*/
 .button{
@@ -231,6 +234,23 @@ img{
 .button:hover{
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
 }
+
+/* .fcbw {
+  display:block;
+}
+
+.fcba {
+  display: none;
+}
+
+@media (max-width:500px) {
+  .fcbw {
+      display: none;
+  }
+  .fcba {
+      display: inline;
+  }
+} */
 
 /* ===== ABOUT =====*/
 .about__container{
@@ -247,6 +267,8 @@ img{
   width: 200px;
   border-radius: .5rem;
 }
+
+
 
 /* ===== SKILLS =====*/
 .skills__container{
@@ -308,12 +330,21 @@ img{
 .work__container{
   row-gap: 2rem;
 }
+.work__subtitle{
+  margin-left: 10px;
+  margin-bottom: var(--mb-2);
+}
 .work__img{
+ 
   box-shadow: 0 4px 25px rgba(14,36,49,.15);
   border-radius: .5rem;
   overflow: hidden;
+  
+ 
 }
 .work__img img{
+  height: 100%;
+  width: 100%;
   transition: 1s;
   cursor: pointer;
 }
@@ -414,9 +445,11 @@ img{
     margin-right: var(--mb-4);
   }
   .home__img{
-    width: 457px;
+    width: auto;
     bottom: 15%;
   }
+
+  
 
   .about__container, .skills__container{
     grid-template-columns: repeat(2,1fr);
@@ -447,4 +480,13 @@ img{
   .home__img{
     right: 10%;
   }
+
+}
+
+ @media screen and (min-width:400){
+
+  .home bd-grid{
+    margin-right: 10px;
+    
+  } 
 }
