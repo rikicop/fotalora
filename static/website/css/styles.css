@@ -61,6 +61,9 @@ body{
 h1,h2,p{
   margin: 0;
 }
+h2{
+  font-size: 20px;
+}
 ul{
   margin: 0;
   padding: 0;
@@ -252,7 +255,7 @@ img{
   }
 } */
 
-/* ===== ABOUT =====*/
+/* ===== SERVICIOS =====*/
 .about__container{
   row-gap: 2rem;
   text-align: center;
@@ -267,10 +270,14 @@ img{
   width: 200px;
   border-radius: .5rem;
 }
+.about__text{
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 
 
-/* ===== SKILLS =====*/
+/* ===== EQUIPO =====*/
 .skills__container{
   row-gap: 2rem;
   text-align: center;
@@ -310,21 +317,80 @@ img{
   border-radius: .5rem;
   z-index: var(--z-back);
 }
-.skills__html{
-  width: 95%;
+
+
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
-.skills__css{
-  width: 85%;
+.wrapper .box{
+  background: #fff;
+  width: calc(33% - 10px);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
 }
-.skills__js{
-  width: 65%;
+.wrapper .box i.quote{
+  font-size: 20px;
+  color: #176ab8;
 }
-.skills__ux{
-  width: 85%;
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
 }
-.skills__img{
-  border-radius: .5rem;
+.box .info .name{
+  font-weight: 600;
+  font-size: 17px;
 }
+.box .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #176ab8;
+}
+.box .info .stars{
+  margin-top: 2px;
+}
+.box .info .stars i{
+  color: #176ab8;
+}
+.box .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #176ab8;
+  border-radius: 50%;
+}
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.box:hover .content .image img{
+  border-color: #fff;
+}
+
+@media (max-width: 1045px) {
+  .wrapper .box{
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper .box{
+    width: 100%;
+  }
+}
+
 
 /* ===== WORK =====*/
 .work__container{
