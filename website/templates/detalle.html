@@ -1,0 +1,77 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block menu %}
+<div class="nav__menu" style="margin-right: 1px;" id="nav-menu">
+    <ul class="nav__list">
+
+        <li class="nav__item"><a href="{% url 'home' %}" class="nav__link"></a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block toggle %}
+<div class="nav__toggle" style="margin-right: 2px; " id="nav-toggle">
+    <a href="{% url 'home' %}" class="nav__link" style="color: black;"><i class='bx bx-arrow-back'></i></a>
+</div>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-xl-7">
+                    <div class="content-watch">
+                        <div class="row no-gutters" style="margin-left: 50px;">
+                           
+                            <div class="col-xl-9 preview">
+                                <img src="{{prod.img.url}}" alt="" class="img-fluid" id="preview" width="550" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="parameter">
+                        <h6>{{prod.titulo}}</h6> <br>
+                        <h1 class="display-2" style="font-size: 2.0rem">{{prod.autor}}</h1>
+                        <!-- <p>Model: 116500</p> -->
+                        <!-- <hr> -->
+                        <div class="detail">
+                            <!-- <h5>MOVEMENT: <span>Eco-Drive H504 => {{prod.name}}</span></h5>
+                            <h5>CASE SIZE: <span>43mm</span></h5> -->
+                            <!-- <h5>COLOR: <span>Silver</span></h5> -->
+                        </div>
+                        <!-- <hr> -->
+                        <div class="price">
+                            <h2><span><sup>$</sup></span>{{prod.contenido}}</h2>
+                        </div>
+                        <div class="cart">
+                            <div class="row no-gutters">
+                                <!-- <button class="btn" onclick="myFunction()" id="myBtn">Cotizar</button> -->
+                                <p><span id="dots"></span><br>
+                                    <span id="more">&nbsp;
+                                        <a href="https://wa.me/584247374178">
+                                            <i class='bx bxl-whatsapp' style="font-size: 35px; color: rgb(32, 129, 48);"></i>    
+                                        </a>
+                                    </span>
+                                    <span id="amore" style="font-size: 25px; color: rgb(6, 12, 7);" >+584247374178</span>
+                                </p>
+                                <!-- <button class="btn"><i class="far fa-heart"></i></button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    {% endblock %}
+   
+
+
+    
+        
+     
+      
+
+
