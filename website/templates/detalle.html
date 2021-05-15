@@ -54,6 +54,13 @@
                                             <i class='bx bxl-whatsapp' style="font-size: 35px; color: rgb(32, 129, 48);"></i>    
                                         </a>
                                     </span>
+                                    <!-- Aquí es el for de lista -->
+                                    {% for d in lista %}
+                                    <ol style="list-style-type: circle; color: black;">
+                                        <li>{{d.lista}}</li>  
+                                    </ol>
+                                         
+                                    {% endfor %}
                                     <span id="amore" style="font-size: 25px; color: rgb(6, 12, 7);" >+584247374178</span>
                                 </p>
                                 <!-- <button class="btn"><i class="far fa-heart"></i></button> -->

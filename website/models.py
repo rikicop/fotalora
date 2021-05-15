@@ -15,5 +15,12 @@ class Post(models.Model):
     img = models.FileField(blank=True, null=True)
     def __str__(self):
         template = '{0.titulo} {0.autor}'
-        return template.format(self)      
+        return template.format(self)
+
+class PostList(models.Model):
+    post = models.ForeignKey(Post, default=None, on_delete=models.CASCADE)
+    lista = models.CharField(max_length=100,blank=False)
+
+    def __str__(self):
+        return self.post.titulo     
 
